@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>gitstatus help</title>
+        <link rel="stylesheet" type="text/css" href="../../css/global.css"></link>
+        <link rel="stylesheet" type="text/css" href="../../css/helps.css"></link>
+    </head>
+    <body>
+        <div id="main">
+            <h1 class="help-title">********wsdldiff help********</h1>
+            <div class="help-content">
+                 <h2 class="help-subhead">Use</h2>
+                 <p>Runs a git diff against two wsdl zip files. Resulting .diff file is stored at transfer/docsys/artifacts</p>
+                 <h2 class="help-subhead">Options</h2>
+                 <ul class="options-list">
+                     <li class="help-option">fileA: Name of a target wsdl.zip file stored on transfer/docsys/uptake. <b>Required</b></li>
+		     <li class="help-option">fileB: Name of a target wsdl.zip file stored on transfer/docsys/uptake. <b>Required</b></li>
+		     <li class="help-option">output: Optional string to use as the file name of git diff output stored at transfer/docsys/artifacts.</li>
+		     <li class="help-option">all: Show entirety of contents in resulting .diff file.</li>
+		     <li class="help-option">filt: Set of options to run with git diff.</li>
+                 </ul>
+		 <h2 class="help-subhead">Example</h2>
+		 <pre class="help-example">:wsdldiff -fileA 16.2.wsdl -fileB 17.1.wsdl</pre>
+            </div>
+	     <a href="/" class="home-link">Return to Main</a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+.help-title{
+    color:#C2352F;
+    width:100%;
+    text-align: center;
+    border-top: 1px solid #C2352F;
+    border-bottom: 1px solid #C2352F;
+    padding-top:6px;
+    padding-bottom:6px;
+}
+
+.help-content {
+    margin-left:20px;
+}
+
+.help-subhead {
+    font-size:14px;
+}
+
+.help-content {
+    width:80%;
+    float:left;
+    margin-left:10%;
+    margin-top:40px;
+    padding:20px;
+    margin-bottom:40px;
+    border:1px solid #333;
+}
+
+.options-list {
+    list-style:none;
+}
+
+.help-option {
+    margin-bottom:4px;
+}
+
+.help-example {
+    
+}
+
+.home-link {
+    text-align:center;
+    width:100%;
+    float:left;
+    font-size:24px;
+    text-decoration:none;
+} 

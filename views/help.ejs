@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>help</title>
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <link rel="stylesheet" type="text/css" href="css/helps.css">
+    <script src="libraries/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+    <header class="nav">
+        <nav>
+            <h3>docsys v 0.0.1</h3>
+            <a href="/menu">menu</a>
+            <a href="/help">help</a>
+            <button onclick="location.reload();">Refresh console</button>
+        </nav>
+    </header>
+    <section id="main">
+        <p>Docsys help.</p>
+        <p>Select a link below to view the help for the corresponding command.</p>
+        <div id="log">
+            <ul class="procs">
+                <% for(var i in proc) {%>
+                <li class="proc">
+                    <span><%= i %>: </span>
+                    <a href="<%= "help/" + i %>"><%= i %></a>
+                </li>
+                <%} %>
+            </ul>
+        </div>
+    </section>
+    <section class="command-panel">
+        <div class="prompt">docsys</div>
+        <form action="/data" method="post">
+            <input id="command-bay" type="text" autofocus="autofocus" name="command">
+            <input id="run" type="submit" value="Run">
+        </form>
+    </section>
+<script>
+    let inp = document.getElementById("command-bay");
+    inp.addEventListener("keyup", function(e){
+            e.preventDefault();
+            if(e.keyCode == 13){
+                inp.value = ""; //value reset.
+            }
+        });
+</script>
+</body>
+</html>

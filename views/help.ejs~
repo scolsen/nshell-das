@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>help</title>
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <link rel="stylesheet" type="text/css" href="css/helps.css">
+    <script src="libraries/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+    <header class="nav">
+        <nav>
+            <h3>docsys v 0.0.1</h3>
+            <a href="/menu">menu</a>
+            <button onclick="">help</button>
+            <button onclick="location.reload();">Refresh console</button>
+        </nav>
+    </header>
+    <section id="main">
+        <p>Welcome to docsys.</p>
+        <p>Run <b>:menu -bug true</b> for a list of available commands, or simply enter a command.</p>
+        <p>Select <b>Refresh console</b> in the header after command execution to load output. A future update will make this automatic.</p>
+        <p>Most things will break right now because of error handling I need to add--so please break away. To try a nifty process that works, run <b>:proptojson -input /home/scolsen/m.properties</b></p>
+        <p>Enter a command in the input at the bottom of the page and press enter or select run to get started.</p>
+        <div id="log">
+            <ul class="procs">
+                <% for(var i=0; i<log.length; i++) {%>
+                <li class="proc">
+                    <span><%= log[i].message %></span>
+                    <% if (log[i].error){ %>
+                    <span class ="error"><%= log[i].error %></span>
+                    <% } %>
+                    <% if(log[i].loc){%> <a href="<%= log[i].loc.replace("/home/scolsen/scott-repo/nshell", ""); %>"><%= log[i].loc.replace("/home/scolsen/scott-repo/nshell", ""); %></a> <%}%>
+                </li>
+                <%} %>
+            </ul>
+        </div>
+    </section>
+    <section class="command-panel">
+        <div class="prompt">docsys</div>
+        <form action="/data" method="post">
+            <input id="command-bay" type="text" autofocus="autofocus" name="command">
+            <input id="run" type="submit" value="Run">
+        </form>
+    </section>
+<script>
+    let inp = document.getElementById("command-bay");
+    inp.addEventListener("keyup", function(e){
+            e.preventDefault();
+            if(e.keyCode == 13){
+                inp.value = ""; //value reset.
+            }
+        });
+</script>
+</body>
+</html>

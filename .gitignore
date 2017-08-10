@@ -1,0 +1,6 @@
+#ignore cegbu
+node_modules/
+data/
+artifacts/
+logs/
+npm-debug.log

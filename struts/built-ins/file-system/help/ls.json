@@ -1,0 +1,32 @@
+{
+  "1":{
+    "element": "h2",
+    "class": "help-title",
+    "value": "========ls Help========"
+  },
+  "2": {
+    "class": "help-name",
+    "element": "p",
+    "value":"ls - lists directory contents"
+  },
+  "3": {
+      "class": "help-synopsis",
+      "element":"pre",
+      "value": ":ls [-option] [value]"
+  },
+  "4": {
+      "class": "help-description",
+      "element": "p",
+      "value": "List information about the specified directory."
+  },
+  "5": {
+    "class": "help-description",
+    "element": "p",
+    "value": "-dir"
+  },
+  "6": {
+    "class": "help-description",
+    "element": "p",
+    "value": "The directory to specify"
+  }
+}

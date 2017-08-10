@@ -1,0 +1,23 @@
+{
+  "1":{
+    "element": "h2",
+    "class": "help-title",
+    "value": "========wsdldiff Help========"
+  },
+  "2": {
+    "element": "h3",
+    "value":"Description"
+  },
+  "3": {
+    "element": "p",
+    "value": "Use wsdldiff to compare differences between two wsdl files.\n Files are compared using git diff. \n New content is indicated by +, deleted content by -"
+  },
+  "4": {
+    "element": "h3",
+    "value": "Options"
+  },
+  "5": {
+    "element": "p",
+    "value": "FileA, the first file to compare."
+  }
+}
